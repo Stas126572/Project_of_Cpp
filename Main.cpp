@@ -1,5 +1,5 @@
 #include "check_value.h"
-#include "hight_scores.h"
+#include "high_scores.h"
 #include "random_value.h"
 
 #include <iostream>
@@ -8,7 +8,7 @@
 int main(int argc, char** argv) {
 
 	int a;
-	a = get_value();
+	a = get_random_value();
 
 
 	// To check - does use print some other argument we should check if the argc >= 2
@@ -24,7 +24,7 @@ int main(int argc, char** argv) {
 				return -1;
 			}
 			// We need to parse the string to the int value
-			a = get_value(std::stoi(argv[2]));
+			a = get_random_value(std::stoi(argv[2]));
 		}
 		else if(arg1_value == "-tester")
 		{
@@ -59,7 +59,7 @@ int main(int argc, char** argv) {
 	std::cout << "Hi! Enter your name, please: " << std::endl;
 	std::cin >> n;
 
-	a = Ot(a);
+	a = play_game(a);
 
 	std::cout << " " << "attempts" << " = " << a << std::endl;
 
